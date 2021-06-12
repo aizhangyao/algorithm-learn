@@ -1,4 +1,4 @@
-package aiz.leetcode.character;
+package com.aiz.leetcode.character;
 
 /**
  * @ClassName Solution38
