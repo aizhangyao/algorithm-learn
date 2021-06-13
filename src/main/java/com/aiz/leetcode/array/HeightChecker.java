@@ -5,13 +5,14 @@ import java.util.Arrays;
 /**
  * @ClassName HeightChecker
  * @Description https://leetcode-cn.com/problems/height-checker/
- * @Author zhangyao
+ * @Author Zhang Yao
  * @Date Create in 20:12 2020/6/30 0030
  * @Version 1.0
  */
 public class HeightChecker {
     /**
      * 我自己写的
+     *
      * @param heights 一组学生的身高
      * @return 最小必要移动人数
      */
@@ -70,7 +71,7 @@ public class HeightChecker {
         System.out.println(hc.heightChecker2(numsThree));//0
     }
 }
-/**
+/*
  * 个人即时感悟--2020/6/30
  * 非递减-->也就是递增排序
  * 所以复制一个数组 给数组先排序 然后统计每一位置不同数量
