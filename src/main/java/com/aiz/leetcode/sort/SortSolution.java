@@ -72,6 +72,16 @@ public class SortSolution {
         return array;
     }
 
+    /**
+     * 6。快速排序：通过一趟排序将待排记录分隔成独立的两部分，其中一部分记录的关键字均比另一部分的关键字小，
+     * 则可分别对这两部分记录继续进行排序，以达到整个序列有序。
+     *
+     * @param array 需要排序的数组
+     * @return 排序后的数组
+     */
+    public static int[] quickSort(int[] array) {
+        return array;
+    }
 
     public static void main(String[] args) {
         int[] array = new int[]{9, 2, 1, 4, 3, 8, 0, -1};
@@ -91,9 +101,9 @@ public class SortSolution {
 
         // 5.归并排序
 
-        // 6.快速排序
+        // 6.快速排序*
 
-        // 7.堆排序
+        // 7.堆排序*
 
         // 8.计数排序
 
