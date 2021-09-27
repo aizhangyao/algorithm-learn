@@ -1,5 +1,7 @@
 package com.aiz.leetcode.practice;
 
+import com.aiz.leetcode.util.ListNode;
+
 /**
  * @ClassName Solution2
  * @Description 两数相加
@@ -8,23 +10,6 @@ package com.aiz.leetcode.practice;
  * @Version 1.0
  */
 public class Solution2 {
-
-    public static class ListNode {
-        int val;
-        ListNode next;
-
-        ListNode() {
-        }
-
-        ListNode(int val) {
-            this.val = val;
-        }
-
-        ListNode(int val, ListNode next) {
-            this.val = val;
-            this.next = next;
-        }
-    }
 
     public static ListNode addTwoNumbers(ListNode l1, ListNode l2) {
         ListNode head = null, tail = null;
