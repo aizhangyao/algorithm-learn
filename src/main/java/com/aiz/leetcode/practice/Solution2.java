@@ -62,4 +62,43 @@ public class Solution2 {
             node = node.next;
         }
     }
+
+    /**
+     * 2022-09-01
+     *
+     * @param l1
+     * @param l2
+     * @return
+     */
+    public static ListNode addTwoNumbers2(ListNode l1, ListNode l2) {
+        ListNode head = null, tail = null;
+        // l1 2->4->3
+        // L2 5->6->4
+        int carry = 0;
+        while (l1 != null || l2 != null) {
+            int n1 = l1 == null ? 0 : l1.val;
+            int n2 = l2 == null ? 0 : l2.val;
+            int sum = n1 + n2 + carry;
+            int val = sum % 10;
+            carry = sum / 10;
+            if (head == null) {
+                head = new ListNode(val);
+                tail = head;
+            } else {
+                tail.next = new ListNode(val);
+                tail = tail.next;
+            }
+
+            if (l1 != null) {
+                l1 = l1.next;
+            }
+            if (l2 != null) {
+                l2 = l2.next;
+            }
+        }
+        if (carry > 0) {
+            tail.next = new ListNode(carry);
+        }
+        return head;
+    }
 }
