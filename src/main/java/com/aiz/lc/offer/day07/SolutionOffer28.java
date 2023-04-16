@@ -1,5 +1,6 @@
 package com.aiz.lc.offer.day07;
 
+import java.util.ArrayList;
 import java.util.LinkedList;
 import java.util.Queue;
 
@@ -58,6 +59,45 @@ public class SolutionOffer28 {
 
             queue.offer(pn.right);
             queue.offer(qn.right);
+        }
+        return true;
+    }
+
+
+    public boolean isSymmetric2(TreeNode root) {
+        if (root == null) {
+            return true;
+        }
+        Queue<TreeNode> queue = new LinkedList();
+        queue.offer(root);
+
+        ArrayList<TreeNode> treeNodes = new ArrayList<>();
+        while (!queue.isEmpty()) {
+            int size = queue.size();
+            for (int i = 0; i < size; i++) {
+                TreeNode node = queue.poll();
+                treeNodes.add(node);
+                if (node != null) {
+                    queue.offer(node.left);
+                    queue.offer(node.right);
+                }
+            }
+            int i = 0;
+            while (i < treeNodes.size() / 2) {
+                TreeNode one = treeNodes.get(i);
+                TreeNode two = treeNodes.get(treeNodes.size() - 1 - i);
+                i++;
+                if (one == null && two == null) {
+                    continue;
+                }
+                if (one == null || two == null) {
+                    return false;
+                }
+                if (one.val != two.val) {
+                    return false;
+                }
+            }
+            treeNodes.clear();
         }
         return true;
     }
