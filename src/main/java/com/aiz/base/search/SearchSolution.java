@@ -1,4 +1,4 @@
-package com.aiz.leetcode.search;
+package com.aiz.base.search;
 
 /**
  * @ClassName SearchSolution

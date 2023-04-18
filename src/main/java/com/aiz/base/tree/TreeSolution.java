@@ -1,4 +1,4 @@
-package com.aiz.leetcode.tree;
+package com.aiz.base.tree;
 
 import java.util.*;
 

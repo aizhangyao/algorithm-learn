@@ -1,4 +1,4 @@
-package com.aiz.leetcode.util;
+package com.aiz.base.list;
 
 /**
  * @ClassName ListNode

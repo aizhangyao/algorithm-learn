@@ -1,6 +1,6 @@
 package com.aiz.leetcode.practice;
 
-import com.aiz.leetcode.util.ListNode;
+import com.aiz.base.list.ListNode;
 
 /**
  * @ClassName Solution2
