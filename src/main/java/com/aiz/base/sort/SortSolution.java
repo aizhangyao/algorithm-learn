@@ -3,11 +3,11 @@ package com.aiz.base.sort;
 import java.util.Arrays;
 
 /**
- * @ClassName SortSolution
- * @Description 排序算法
- * @Author Yao
- * @Date Create in 11:46 下午 2021/6/16
- * @Version 1.0
+ * @author Yao
+ * @version 1.0
+ * @className SortSolution
+ * @description 排序算法
+ * @date Create in 11:46 下午 2021/6/16
  */
 public class SortSolution {
 

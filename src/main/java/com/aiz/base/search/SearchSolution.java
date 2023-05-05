@@ -1,11 +1,11 @@
 package com.aiz.base.search;
 
 /**
- * @ClassName SearchSolution
- * @Description 查找算法
- * @Author Yao
- * @Date Create in 10:20 下午 2021/6/14
- * @Version 1.0
+ * @author Yao
+ * @version 1.0
+ * @className SearchSolution
+ * @description 查找算法
+ * @date Create in 10:20 下午 2021/6/14
  */
 public class SearchSolution {
 
@@ -54,6 +54,9 @@ public class SearchSolution {
     }
 
 
+    /**
+     * 二分查找(递归写法)
+     */
     public static int binarySearchRecursive(int[] a, int value, int low, int high) {
         int mid = (low + high) / 2;
         if (value == a[mid]) {
