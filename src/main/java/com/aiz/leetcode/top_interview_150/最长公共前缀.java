@@ -26,7 +26,7 @@ public class 最长公共前缀 {
             }
             length++;
         }
-        return strs[0];
+        return strs[0].substring(0, length);
     }
 
     @Test
