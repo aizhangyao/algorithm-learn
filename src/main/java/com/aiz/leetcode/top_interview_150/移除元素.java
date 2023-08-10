@@ -4,7 +4,6 @@ import org.junit.jupiter.api.Test;
 
 /**
  * @author ZhangYao
- * @version 1.0
  * @className 移除元素
  * @description https://leetcode.cn/problems/remove-element/
  * @date Create in 16:06 2023/8/4
@@ -27,7 +26,7 @@ public class 移除元素 {
     public void test() {
         移除元素 clazz = new 移除元素();
         int[] nums = new int[]{3, 2, 2, 3};
-        clazz.removeElement(nums, 3);
-        System.out.println();
+        int i = clazz.removeElement(nums, 3);
+        assert i == 2;
     }
 }

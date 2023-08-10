@@ -1,5 +1,6 @@
 package com.aiz.leetcode.top_interview_150;
 
+import com.aiz.base.util.BaseTool;
 import org.junit.jupiter.api.Test;
 
 /**
@@ -33,10 +34,7 @@ public class 两数之和II_输入有序数组 {
         int[] numbers = new int[]{2, 7, 11, 15};
         int[] ints = clazz.twoSum(numbers, 9);
         int[] expectedResult = new int[]{1, 2};
-        assert ints.length == expectedResult.length;
-        for (int i = 0; i < ints.length; i++) {
-            assert ints[i] == expectedResult[i];
-        }
+        BaseTool.equals(ints, expectedResult);
     }
 
     @Test
@@ -45,9 +43,6 @@ public class 两数之和II_输入有序数组 {
         int[] numbers = new int[]{2, 3, 4};
         int[] ints = clazz.twoSum(numbers, 6);
         int[] expectedResult = new int[]{1, 3};
-        assert ints.length == expectedResult.length;
-        for (int i = 0; i < ints.length; i++) {
-            assert ints[i] == expectedResult[i];
-        }
+        BaseTool.equals(ints, expectedResult);
     }
 }

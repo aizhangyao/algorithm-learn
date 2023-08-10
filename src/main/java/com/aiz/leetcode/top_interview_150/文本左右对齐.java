@@ -1,5 +1,6 @@
 package com.aiz.leetcode.top_interview_150;
 
+import com.aiz.base.util.BaseTool;
 import org.junit.jupiter.api.Test;
 
 import java.util.ArrayList;
@@ -105,10 +106,7 @@ public class 文本左右对齐 {
         expectedResult.add("This    is    an");
         expectedResult.add("example  of text");
         expectedResult.add("justification.  ");
-        assert strings.size() == expectedResult.size();
-        for (int i = 0; i < strings.size(); i++) {
-            assert Objects.equals(strings.get(i), expectedResult.get(i));
-        }
+        BaseTool.equals(strings, expectedResult);
     }
 
     @Test
@@ -120,10 +118,7 @@ public class 文本左右对齐 {
         expectedResult.add("What   must   be");
         expectedResult.add("acknowledgment  ");
         expectedResult.add("shall be        ");
-        assert strings.size() == expectedResult.size();
-        for (int i = 0; i < strings.size(); i++) {
-            assert Objects.equals(strings.get(i), expectedResult.get(i));
-        }
+        BaseTool.equals(strings, expectedResult);
     }
 
     @Test
@@ -138,9 +133,6 @@ public class 文本左右对齐 {
         expectedResult.add("a  computer.  Art is");
         expectedResult.add("everything  else  we");
         expectedResult.add("do                  ");
-        assert strings.size() == expectedResult.size();
-        for (int i = 0; i < strings.size(); i++) {
-            assert Objects.equals(strings.get(i), expectedResult.get(i));
-        }
+        BaseTool.equals(strings, expectedResult);
     }
 }

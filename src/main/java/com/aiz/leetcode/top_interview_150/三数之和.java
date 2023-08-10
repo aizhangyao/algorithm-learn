@@ -1,11 +1,11 @@
 package com.aiz.leetcode.top_interview_150;
 
+import com.aiz.base.util.BaseTool;
 import org.junit.jupiter.api.Test;
 
 import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.List;
-import java.util.Objects;
 
 /**
  * @author ZhangYao
@@ -72,7 +72,7 @@ public class 三数之和 {
         list1.add(1);
         expectedResult.add(list1);
 
-        assertList(list, expectedResult);
+        BaseTool.equals(list, expectedResult);
     }
 
     @Test
@@ -81,7 +81,7 @@ public class 三数之和 {
         int[] nums = new int[]{-0, 1, 1};
         List<List<Integer>> list = clazz.threeSum(nums);
         List<List<Integer>> expectedResult = new ArrayList<>();
-        assertList(list, expectedResult);
+        BaseTool.equals(list, expectedResult);
     }
 
     @Test
@@ -95,7 +95,7 @@ public class 三数之和 {
         list0.add(0);
         list0.add(0);
         expectedResult.add(list0);
-        assertList(list, expectedResult);
+        BaseTool.equals(list, expectedResult);
     }
 
     @Test
@@ -109,18 +109,7 @@ public class 三数之和 {
         list0.add(0);
         list0.add(0);
         expectedResult.add(list0);
-        assertList(list, expectedResult);
+        BaseTool.equals(list, expectedResult);
     }
 
-    private void assertList(List<List<Integer>> list, List<List<Integer>> expectedResult) {
-        assert list.size() == expectedResult.size();
-        for (int i = 0; i < list.size(); i++) {
-            List<Integer> listTemp = list.get(i);
-            List<Integer> expectedResultTemp = expectedResult.get(i);
-            assert listTemp.size() == expectedResultTemp.size();
-            for (int j = 0; j < list.size(); j++) {
-                assert Objects.equals(listTemp.get(j), expectedResultTemp.get(j));
-            }
-        }
-    }
 }

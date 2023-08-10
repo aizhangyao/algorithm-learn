@@ -1,5 +1,6 @@
 package com.aiz.leetcode.top_interview_150;
 
+import com.aiz.base.util.BaseTool;
 import org.junit.jupiter.api.Test;
 
 import java.util.ArrayList;
@@ -44,8 +45,10 @@ public class 螺旋矩阵 {
         螺旋矩阵 clazz = new 螺旋矩阵();
         int[][] matrix = {{1, 2, 3}, {4, 5, 6}, {7, 8, 9}};
         List<Integer> list = clazz.spiralOrder(matrix);
+        List<Integer> expectedResult = new ArrayList<>();
         Integer[] array = {1, 2, 3, 6, 9, 8, 7, 4, 5};
-        expected(list, array);
+        expectedResult.addAll(Arrays.asList(array));
+        BaseTool.equals(list, expectedResult);
     }
 
     @Test
@@ -53,16 +56,9 @@ public class 螺旋矩阵 {
         螺旋矩阵 clazz = new 螺旋矩阵();
         int[][] matrix = {{1, 2, 3, 4}, {5, 6, 7, 8}, {9, 10, 11, 12}};
         List<Integer> list = clazz.spiralOrder(matrix);
-        Integer[] array = {1, 2, 3, 4, 8, 12, 11, 10, 9, 5, 6, 7};
-        expected(list, array);
-    }
-
-    private void expected(List<Integer> list, Integer[] array) {
         List<Integer> expectedResult = new ArrayList<>();
+        Integer[] array = {1, 2, 3, 4, 8, 12, 11, 10, 9, 5, 6, 7};
         expectedResult.addAll(Arrays.asList(array));
-        assert list.size() == expectedResult.size();
-        for (int i = 0; i < list.size(); i++) {
-            assert Objects.equals(list.get(i), expectedResult.get(i));
-        }
+        BaseTool.equals(list, expectedResult);
     }
 }

@@ -58,7 +58,7 @@ public class 除自身以外数组的乘积 {
         除自身以外数组的乘积 clazz = new 除自身以外数组的乘积();
         int[] nums = new int[]{1, 2, 3, 4};
         int[] array = clazz.productExceptSelf(nums);
-        Arrays.equals(array, new int[]{24, 12, 8, 6});
+        assert Arrays.equals(array, new int[]{24, 12, 8, 6});
     }
 
     @Test
@@ -66,7 +66,7 @@ public class 除自身以外数组的乘积 {
         除自身以外数组的乘积 clazz = new 除自身以外数组的乘积();
         int[] nums = new int[]{-1, 1, 0, -3, 3};
         int[] array = clazz.productExceptSelf(nums);
-        Arrays.equals(array, new int[]{0, 0, 9, 0, 0});
+        assert Arrays.equals(array, new int[]{0, 0, 9, 0, 0});
     }
 
 }
