@@ -4,7 +4,6 @@ import org.junit.jupiter.api.Test;
 
 /**
  * @author ZhangYao
- * @version 1.0
  * @className 删除有序数组中的重复项II
  * @description https://leetcode.cn/problems/remove-duplicates-from-sorted-array-ii/
  * @date Create in 16:56 2023/8/4

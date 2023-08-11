@@ -6,7 +6,6 @@ import java.util.Random;
 
 /**
  * @author ZhangYao
- * @version 1.0
  * @className O1时间插入删除和获取随机元素
  * @description https://leetcode.cn/problems/insert-delete-getrandom-o1/
  * @date Create in 17:55 2023/8/7

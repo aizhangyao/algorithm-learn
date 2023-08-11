@@ -4,7 +4,6 @@ import org.junit.jupiter.api.Test;
 
 /**
  * @author ZhangYao
- * @version 1.0
  * @className 合并两个有序数组
  * @description https://leetcode.cn/problems/merge-sorted-array/
  * @date Create in 15:20 2023/8/4

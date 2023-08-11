@@ -3,7 +3,6 @@ package com.aiz.leetcode.top_interview_150;
 import org.junit.jupiter.api.Test;
 
 import java.util.Arrays;
-import java.util.Collections;
 
 /**
  * @author ZhangYao

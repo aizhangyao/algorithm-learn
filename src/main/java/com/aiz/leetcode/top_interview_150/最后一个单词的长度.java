@@ -4,7 +4,6 @@ import org.junit.jupiter.api.Test;
 
 /**
  * @author ZhangYao
- * @version 1.0
  * @className 最后一个单词的长度
  * @description https://leetcode.cn/problems/length-of-last-word/
  * @date Create in 15:46 2023/8/8
