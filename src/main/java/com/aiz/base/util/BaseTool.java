@@ -1,7 +1,7 @@
 package com.aiz.base.util;
 
-import java.util.Collections;
-import java.util.Comparator;
+import com.aiz.base.list.ListNode;
+
 import java.util.List;
 import java.util.Objects;
 
@@ -38,4 +38,13 @@ public class BaseTool {
         }
     }
 
+
+    public static void equals(ListNode l1, ListNode l2) {
+        while (l1 != null && l2 != null) {
+            assert l1.val == l2.val;
+            l1 = l1.next;
+            l2 = l2.next;
+        }
+        assert l1 == l2;
+    }
 }
