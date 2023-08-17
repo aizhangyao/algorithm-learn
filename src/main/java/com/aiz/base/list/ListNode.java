@@ -34,6 +34,21 @@ public class ListNode {
         return result;
     }
 
+    public static ListNode initCircle(int[] array, int pos) {
+        ListNode head = ListNode.init(array);
+        ListNode newHead = head, node = null;
+        int index = 0;
+        while (head.next != null) {
+            if (index == pos) {
+                node = head;
+            }
+            head = head.next;
+            index++;
+        }
+        head.next = node;
+        return newHead;
+    }
+
     public static void print(ListNode node) {
         ListNode temp = node;
         while (temp != null) {
