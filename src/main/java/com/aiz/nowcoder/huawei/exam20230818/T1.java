@@ -7,6 +7,15 @@ import java.util.Scanner;
 
 public class T1 {
 
+    /**
+     * 餐厅排队取餐，每阶段会做新的饭。每阶段做的一样多，速度最少是多少。
+     * 输入
+     * 3
+     * 14
+     * 10 4 5
+     * 输出
+     * 3
+     */
     public static void main(String[] args) {
         Scanner in = new Scanner(System.in);
         // 食堂开餐时间

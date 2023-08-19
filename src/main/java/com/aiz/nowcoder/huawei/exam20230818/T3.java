@@ -3,14 +3,16 @@ package com.aiz.nowcoder.huawei.exam20230818;
 import java.util.Scanner;
 
 public class T3 {
+    /**
+     * 0 1 0 1 0 1 0 0 1
+     * 区域污染，上下左右污染，多少次天可以污染完。
+     */
     public static void main(String[] args) {
-//        Scanner in = new Scanner(System.in);
-//        String s = in.nextLine();
-//        String[] split = s.split(",");
-        String[] split = new String[]{"1", "0", "1", "0", "0", "0", "1", "0", "1"};
-        System.out.println("sss"+split.length);
+        Scanner in = new Scanner(System.in);
+        String s = in.nextLine();
+        String[] split = s.split(",");
+        // String[] split = new String[]{"1", "0", "1", "0", "0", "0", "1", "0", "1"};
         int n = (int) Math.sqrt(split.length);
-        System.out.println("eee"+n);
         int[][] map = new int[n][n];
         // 统计被感染的个数
         int num = 0;

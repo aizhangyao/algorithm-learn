@@ -3,6 +3,9 @@ package com.aiz.nowcoder.huawei.exam20230818;
 import java.util.Scanner;
 
 public class T2 {
+    /**
+     * 买蛋糕和礼品各一个，小于某个价格的最多组合多少个？
+     */
     public static void main(String[] args) {
         Scanner in = new Scanner(System.in);
         String s1 = in.nextLine();
