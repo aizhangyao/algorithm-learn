@@ -3,25 +3,28 @@ package com.aiz.base.tree;
 import java.util.*;
 
 /**
- * 二叉树
+ * @author ZhangYao
+ * @className TreeNode 二叉树
+ * @description Definition for a binary tree node.
  * https://leetcode-cn.com/leetbook/read/data-structure-binary-tree/
+ * @date Create in 18:54 2023/8/24
  */
-public class TreeSolution {
+public class TreeNode {
+    public int val;
+    public TreeNode left;
+    public TreeNode right;
 
-    public static class TreeNode {
-        int val;
-        TreeNode left;
-        TreeNode right;
+    public TreeNode() {
+    }
 
-        public TreeNode(int val) {
-            this.val = val;
-        }
+    public TreeNode(int val) {
+        this.val = val;
+    }
 
-        public TreeNode(int val, TreeNode left, TreeNode right) {
-            this.val = val;
-            this.left = left;
-            this.right = right;
-        }
+    public TreeNode(int val, TreeNode left, TreeNode right) {
+        this.val = val;
+        this.left = left;
+        this.right = right;
     }
 
     /**
@@ -200,6 +203,36 @@ public class TreeSolution {
      * 要是使用迭代方式的话需要使用队列
      */
 
+    public final static int NULL = -10086;
+
+    public static TreeNode init(int[] array) {
+        if (array == null || array.length == 0) {
+            return new TreeNode();
+        }
+        List<TreeNode> nodes = new ArrayList<>(array.length);
+        for (int obj : array) {
+            nodes.add(new TreeNode(obj));
+        }
+        for (int i = 0; i < array.length / 2 - 1; i++) {
+            TreeNode node = nodes.get(i);
+            if (node.val == NULL) {
+                continue;
+            }
+            node.left = nodes.get(i * 2 + 1);
+            node.right = nodes.get(i * 2 + 2);
+        }
+        // 只有当总节点数是奇数时，最后一个父节点才有右子节点
+        int lastPNodeIndex = array.length / 2 - 1;
+        TreeNode lastPNode = nodes.get(lastPNodeIndex);
+        // 左孩子节点
+        lastPNode.left = nodes.get(lastPNodeIndex * 2 + 1);
+        if (array.length % 2 != 0) {
+            lastPNode.right = nodes.get(lastPNodeIndex * 2 + 2);
+        }
+        return nodes.get(0);
+    }
+
+
     private static TreeNode initTreeNode() {
         // F B G A D null I null C E H null
         // 6 2 7 1 4 null 9 null 3 5 8 null
@@ -219,29 +252,29 @@ public class TreeSolution {
 
     public static void main(String[] args) {
         TreeNode root = initTreeNode();
-        TreeSolution treeSolution = new TreeSolution();
+        TreeNode treeNode = new TreeNode();
 
         // 测试前序遍历
-        System.out.println(treeSolution.preorderTraversal(root));
+        System.out.println(treeNode.preorderTraversal(root));
 
         // 测试中序遍历
-        System.out.println(treeSolution.inorderTraversal(root));
+        System.out.println(treeNode.inorderTraversal(root));
 
         // 测试后序遍历(使用栈)
-        System.out.println(treeSolution.postorderTraversal(root));
+        System.out.println(treeNode.postorderTraversal(root));
 
         // 测试层序遍历
-        System.out.println(treeSolution.levelOrder(root));
+        System.out.println(treeNode.levelOrder(root));
 
         // 请寻找它的最大深度(自顶向下)
-        treeSolution.maximumDepth(root, 0);
-        System.out.println(treeSolution.answer);
+        treeNode.maximumDepth(root, 0);
+        System.out.println(treeNode.answer);
 
         // 请寻找它的最大深度(自底向上)
-        System.out.println(treeSolution.maxDepth(root));
+        System.out.println(treeNode.maxDepth(root));
 
         // 测试镜像对称
-        System.out.println(treeSolution.isSymmetric(root));
+        System.out.println(treeNode.isSymmetric(root));
     }
 
 }
