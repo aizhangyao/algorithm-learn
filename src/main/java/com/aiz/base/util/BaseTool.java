@@ -1,6 +1,7 @@
 package com.aiz.base.util;
 
 import com.aiz.base.list.ListNode;
+import com.aiz.base.tree.TreeNode;
 
 import java.util.List;
 import java.util.Objects;
@@ -38,7 +39,9 @@ public class BaseTool {
         }
     }
 
-
+    /**
+     * 判断两个链表是否相等
+     */
     public static void equals(ListNode l1, ListNode l2) {
         while (l1 != null && l2 != null) {
             assert l1.val == l2.val;
@@ -46,5 +49,18 @@ public class BaseTool {
             l2 = l2.next;
         }
         assert l1 == l2;
+    }
+
+    /**
+     * 判断两颗二叉树是否相等
+     */
+    public static boolean equals(TreeNode p, TreeNode q) {
+        if (p == null && q == null) {
+            return true;
+        }
+        if (p != null && q != null && p.val == q.val) {
+            return equals(p.left, q.left) && equals(p.right, q.right);
+        }
+        return false;
     }
 }
