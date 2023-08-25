@@ -223,11 +223,13 @@ public class TreeNode {
         }
         // 只有当总节点数是奇数时，最后一个父节点才有右子节点
         int lastPNodeIndex = array.length / 2 - 1;
-        TreeNode lastPNode = nodes.get(lastPNodeIndex);
-        // 左孩子节点
-        lastPNode.left = nodes.get(lastPNodeIndex * 2 + 1);
-        if (array.length % 2 != 0) {
-            lastPNode.right = nodes.get(lastPNodeIndex * 2 + 2);
+        if (lastPNodeIndex >= 0) {
+            TreeNode lastPNode = nodes.get(lastPNodeIndex);
+            // 左孩子节点
+            lastPNode.left = nodes.get(lastPNodeIndex * 2 + 1);
+            if (array.length % 2 != 0) {
+                lastPNode.right = nodes.get(lastPNodeIndex * 2 + 2);
+            }
         }
         return nodes.get(0);
     }
