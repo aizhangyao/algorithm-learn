@@ -12,6 +12,7 @@ import org.junit.jupiter.api.Test;
  */
 public class 旋转数组 {
     public void rotate(int[] nums, int k) {
+        k %= nums.length;
         reverse(nums, 0, nums.length - 1);
         reverse(nums, 0, k - 1);
         reverse(nums, k, nums.length - 1);
@@ -21,10 +22,8 @@ public class 旋转数组 {
         while (start < end) {
             // 交换nums[start]和nums[end]
             int temp = nums[start];
-            nums[start] = nums[end];
-            nums[end] = temp;
-            start++;
-            end--;
+            nums[start++] = nums[end];
+            nums[end--] = temp;
         }
     }
 
@@ -32,9 +31,10 @@ public class 旋转数组 {
      * 时间复杂度kn，运行不通过，超时
      */
     public void rotate2(int[] nums, int k) {
+        k %= nums.length;
         for (int i = 0; i < k; i++) {
             int temp = nums[0];
-            nums[0] = nums[nums.length-1];
+            nums[0] = nums[nums.length - 1];
             for (int j = 1; j < nums.length; j++) {
                 int t = nums[j];
                 nums[j] = temp;
