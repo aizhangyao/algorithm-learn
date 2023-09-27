@@ -21,8 +21,10 @@ public class 旋转数组 {
         while (start < end) {
             // 交换nums[start]和nums[end]
             int temp = nums[start];
-            nums[start++] = nums[end];
-            nums[end--] = temp;
+            nums[start] = nums[end];
+            nums[end] = temp;
+            start++;
+            end--;
         }
     }
 
