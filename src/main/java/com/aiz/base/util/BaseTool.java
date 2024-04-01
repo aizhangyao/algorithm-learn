@@ -63,4 +63,11 @@ public class BaseTool {
         }
         return false;
     }
+
+    /**
+     * 判断两个字符串是否相等
+     */
+    public static boolean equals(String a, String b) {
+        return Objects.equals(a, b);
+    }
 }

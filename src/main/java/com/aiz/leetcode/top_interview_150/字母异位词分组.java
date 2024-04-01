@@ -15,7 +15,7 @@ import java.util.Map;
  * @date Create in 15:00 2023/8/11
  */
 public class 字母异位词分组 {
-    public List<List<String>> groupAnagrams(String[] strs) {
+    public List<List<String>> groupAnagrams2(String[] strs) {
         Map<String, List<String>> map = new HashMap<>();
         for (String s : strs) {
             int[] nums = new int[26];
@@ -35,6 +35,34 @@ public class 字母异位词分组 {
             map.put(key, list);
         }
 
+        List<List<String>> result = new ArrayList<>();
+        for (String key : map.keySet()) {
+            result.add(map.get(key));
+        }
+        return result;
+    }
+
+    // 2024-03-29
+    public List<List<String>> groupAnagrams(String[] strs) {
+        Map<String, List<String>> map = new HashMap<>();
+        for (String str : strs) {
+            int[] nums = new int[26];
+            char[] chars = str.toCharArray();
+            for (char aChar : chars) {
+                nums[aChar - 'a']++;
+            }
+            StringBuilder sb = new StringBuilder();
+            for (int i = 0; i < nums.length; i++) {
+                if (nums[i] != 0) {
+                    sb.append((char) ('a' + i));
+                    sb.append(nums[i]);
+                }
+            }
+            String key = sb.toString();
+            List<String> list = map.getOrDefault(key, new ArrayList<>());
+            list.add(str);
+            map.put(key, list);
+        }
         List<List<String>> result = new ArrayList<>();
         for (String key : map.keySet()) {
             result.add(map.get(key));
