@@ -20,6 +20,21 @@ public class BaseTool {
         }
     }
 
+    public static boolean isEquals(int[] a, int[] b) {
+        if (a == null || b == null) {
+            return a == b;
+        }
+        if (a.length != b.length) {
+            return false;
+        }
+        for (int i = 0; i < a.length; i++) {
+            if (a[i] != b[i]) {
+                return false;
+            }
+        }
+        return true;
+    }
+
     public static void equals(int[][] a, int[][] b) {
         for (int i = 0; i < a.length; i++) {
             for (int j = 0; j < b[i].length; j++) {
