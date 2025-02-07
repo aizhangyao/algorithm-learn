@@ -5,13 +5,12 @@ import java.util.Map;
 
 /**
  * @author ZhangYao
- * @version 1.0
- * @className SolutionOffer35
+ * @className 复杂链表的复制
  * @description 剑指 Offer 35. 复杂链表的复制
  * https://leetcode.cn/problems/fu-za-lian-biao-de-fu-zhi-lcof/
  * @date Create in 22:27 2023/4/5
  */
-public class SolutionOffer35 {
+public class 复杂链表的复制 {
     /**
      * Definition for a Node.
      */
@@ -41,9 +40,6 @@ public class SolutionOffer35 {
         }
         return map.get(head);
     }
-
-
-
 
     /**
      * answer1 : hash表，原本node和新node的映射关系
