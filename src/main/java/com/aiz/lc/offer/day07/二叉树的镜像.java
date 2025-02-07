@@ -1,26 +1,18 @@
 package com.aiz.lc.offer.day07;
 
+import com.aiz.base.tree.TreeNode;
+
 /**
  * @author ZhangYao
- * @version 1.0
- * @className SolutionOffer27
+ * @className 二叉树的镜像
  * @description 剑指 Offer 27. 二叉树的镜像
  * https://leetcode.cn/problems/er-cha-shu-de-jing-xiang-lcof/
  * @date Create in 00:18 2023/4/7
  */
-public class SolutionOffer27 {
+public class 二叉树的镜像 {
     /**
      * Definition for a binary tree node.
      */
-    public class TreeNode {
-        int val;
-        TreeNode left;
-        TreeNode right;
-
-        TreeNode(int x) {
-            val = x;
-        }
-    }
 
     public TreeNode mirrorTree(TreeNode root) {
         if (root == null) {

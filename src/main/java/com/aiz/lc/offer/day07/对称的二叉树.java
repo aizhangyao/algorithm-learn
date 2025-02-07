@@ -1,30 +1,22 @@
 package com.aiz.lc.offer.day07;
 
+import com.aiz.base.tree.TreeNode;
+
 import java.util.ArrayList;
 import java.util.LinkedList;
 import java.util.Queue;
 
 /**
  * @author ZhangYao
- * @version 1.0
- * @className SolutionOffer28
+ * @className 对称的二叉树
  * @description 剑指 Offer 28. 对称的二叉树
  * https://leetcode.cn/problems/dui-cheng-de-er-cha-shu-lcof/
  * @date Create in 00:27 2023/4/7
  */
-public class SolutionOffer28 {
+public class 对称的二叉树 {
     /**
      * Definition for a binary tree node.
      */
-    public class TreeNode {
-        int val;
-        TreeNode left;
-        TreeNode right;
-
-        TreeNode(int x) {
-            val = x;
-        }
-    }
 
     public boolean isSymmetric(TreeNode root) {
         return check(root, root);

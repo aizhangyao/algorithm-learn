@@ -1,5 +1,7 @@
 package com.aiz.lc.offer.day19;
 
+import com.aiz.base.tree.TreeNode;
+
 import java.util.HashMap;
 import java.util.HashSet;
 import java.util.Map;
@@ -7,28 +9,12 @@ import java.util.Set;
 
 /**
  * @author ZhangYao
- * @version 1.0
- * @className SolutionOffer68II
+ * @className 二叉树的最近公共祖先II
  * @description 剑指 Offer 68 - II. 二叉树的最近公共祖先
  * https://leetcode.cn/problems/er-cha-shu-de-zui-jin-gong-gong-zu-xian-lcof/
  * @date Create in 00:03 2023/4/24
  */
-public class SolutionOffer68II {
-    public class TreeNode {
-        public int val;
-        public TreeNode left;
-        public TreeNode right;
-
-        public TreeNode(int val) {
-            this.val = val;
-        }
-
-        public TreeNode(int val, TreeNode left, TreeNode right) {
-            this.val = val;
-            this.left = left;
-            this.right = right;
-        }
-    }
+public class 二叉树的最近公共祖先II {
 
     public TreeNode lowestCommonAncestor2(TreeNode root, TreeNode p, TreeNode q) {
         dfs(root, p, q);

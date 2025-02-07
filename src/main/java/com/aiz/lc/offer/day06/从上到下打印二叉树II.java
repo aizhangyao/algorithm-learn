@@ -1,5 +1,7 @@
 package com.aiz.lc.offer.day06;
 
+import com.aiz.base.tree.TreeNode;
+
 import java.util.ArrayList;
 import java.util.LinkedList;
 import java.util.List;
@@ -7,23 +9,12 @@ import java.util.Queue;
 
 /**
  * @author ZhangYao
- * @version 1.0
- * @className SolutionOffer32II
+ * @className 从上到下打印二叉树II
  * @description 剑指 Offer 32 - II. 从上到下打印二叉树 II
  * https://leetcode.cn/problems/cong-shang-dao-xia-da-yin-er-cha-shu-ii-lcof/
  * @date Create in 18:54 2023/4/6
  */
-public class SolutionOffer32II {
-    public class TreeNode {
-        int val;
-        TreeNode left;
-        TreeNode right;
-
-        TreeNode(int x) {
-            val = x;
-        }
-    }
-
+public class 从上到下打印二叉树II {
     /**
      * 广度优先遍历
      */

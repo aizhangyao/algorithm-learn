@@ -1,6 +1,6 @@
 package com.aiz.lc.offer.day15;
 
-import com.aiz.lc.offer.utils.TreeNode;
+import com.aiz.base.tree.TreeNode;
 
 import java.util.ArrayList;
 import java.util.Deque;
@@ -9,13 +9,12 @@ import java.util.List;
 
 /**
  * @author ZhangYao
- * @version 1.0
- * @className SolutionOffer34
+ * @className 二叉树中和为某一值的路径
  * @description 剑指 Offer 34. 二叉树中和为某一值的路径
  * https://leetcode.cn/problems/er-cha-shu-zhong-he-wei-mou-yi-zhi-de-lu-jing-lcof/
  * @date Create in 15:57 2023/4/17
  */
-public class SolutionOffer34 {
+public class 二叉树中和为某一值的路径 {
     List<List<Integer>> result = new LinkedList<>();
     Deque<Integer> path = new LinkedList<>();
 
@@ -42,7 +41,7 @@ public class SolutionOffer34 {
     }
 
     public static void main(String[] args) {
-        SolutionOffer34 solutionOffer34 = new SolutionOffer34();
+        二叉树中和为某一值的路径 solutionOffer34 = new 二叉树中和为某一值的路径();
         /**
          *           5
          *    4            8

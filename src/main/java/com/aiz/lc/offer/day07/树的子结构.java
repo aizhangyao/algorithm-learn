@@ -1,23 +1,15 @@
 package com.aiz.lc.offer.day07;
 
+import com.aiz.base.tree.TreeNode;
+
 /**
  * @author ZhangYao
- * @version 1.0
- * @className SolutionOffer26
+ * @className 树的子结构
  * @description 剑指 Offer 26. 树的子结构
  * https://leetcode.cn/problems/shu-de-zi-jie-gou-lcof/
  * @date Create in 21:29 2023/4/6
  */
-public class SolutionOffer26 {
-    public class TreeNode {
-        int val;
-        TreeNode left;
-        TreeNode right;
-
-        TreeNode(int x) {
-            val = x;
-        }
-    }
+public class 树的子结构 {
 
     /**
      * 输入两棵二叉树A和B，判断B是不是A的子结构。(约定空树不是任意一个树的子结构)

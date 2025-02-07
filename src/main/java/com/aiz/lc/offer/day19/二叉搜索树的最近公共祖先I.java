@@ -1,32 +1,18 @@
 package com.aiz.lc.offer.day19;
 
+import com.aiz.base.tree.TreeNode;
+
 import java.util.ArrayList;
 import java.util.List;
 
 /**
  * @author ZhangYao
- * @version 1.0
- * @className SolutionOffer68I
+ * @className 二叉搜索树的最近公共祖先I
  * @description Offer 68 - I. 二叉搜索树的最近公共祖先
  * https://leetcode.cn/problems/er-cha-sou-suo-shu-de-zui-jin-gong-gong-zu-xian-lcof/
  * @date Create in 23:35 2023/4/23
  */
-public class SolutionOffer68I {
-    public class TreeNode {
-        public int val;
-        public TreeNode left;
-        public TreeNode right;
-
-        public TreeNode(int val) {
-            this.val = val;
-        }
-
-        public TreeNode(int val, TreeNode left, TreeNode right) {
-            this.val = val;
-            this.left = left;
-            this.right = right;
-        }
-    }
+public class 二叉搜索树的最近公共祖先I {
 
     /**
      * 给定一个二叉搜索树, 找到该树中两个指定节点的最近公共祖先。

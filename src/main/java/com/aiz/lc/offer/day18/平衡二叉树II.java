@@ -1,29 +1,15 @@
 package com.aiz.lc.offer.day18;
 
+import com.aiz.base.tree.TreeNode;
+
 /**
  * @author ZhangYao
- * @version 1.0
- * @className SolutionOffer55II
+ * @className 平衡二叉树II
  * @description 剑指 Offer 55 - II. 平衡二叉树
  * https://leetcode.cn/problems/ping-heng-er-cha-shu-lcof/
  * @date Create in 23:13 2023/4/23
  */
-public class SolutionOffer55II {
-    public class TreeNode {
-        public int val;
-        public TreeNode left;
-        public TreeNode right;
-
-        public TreeNode(int val) {
-            this.val = val;
-        }
-
-        public TreeNode(int val, TreeNode left, TreeNode right) {
-            this.val = val;
-            this.left = left;
-            this.right = right;
-        }
-    }
+public class 平衡二叉树II {
 
     /**
      * 输入一棵二叉树的根节点，判断该树是不是平衡二叉树。
